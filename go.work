@@ -1,0 +1,17 @@
+go 1.19
+
+use (
+	./recursion
+	./recursion/hanoi
+	./recursion/sudoku
+	./sorting
+	./sorting/bubble
+	./sorting/selection
+	./sorting/insertion
+	./sorting/quick
+	./sorting/merge
+	./sorting/gosort
+	./sorting/heap
+	./wiki
+	./simplehttp
+)
