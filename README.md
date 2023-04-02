@@ -13,5 +13,3 @@ minimal GO Webserver
 
 ## wiki
 ein Wiki
-
-
