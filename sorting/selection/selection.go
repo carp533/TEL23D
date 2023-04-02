@@ -5,9 +5,10 @@ func Sort(a []int) []int {
 		minIndex := i
 		for j := i + 1; j < len(a); j++ {
 			if a[j] < a[minIndex] {
-				a[j], a[minIndex] = a[minIndex], a[j]
+				minIndex = j
 			}
 		}
+		a[i], a[minIndex] = a[minIndex], a[i]
 	}
 	return a
 }
