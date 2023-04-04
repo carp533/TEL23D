@@ -21,7 +21,7 @@ func main() {
 
 	copy(slice, slice2)
 	fmt.Println("\n--- Unsorted --- ", slice)
-	fmt.Println("--- heap     --- ", heap.Sort(slice2))
+	fmt.Println("--- heap     --- ", heap.Sort(slice))
 	copy(slice, slice2)
 	fmt.Println("\n--- Unsorted --- ", slice)
 	fmt.Println("--- bubble   --- ", bubble.Sort(slice))
