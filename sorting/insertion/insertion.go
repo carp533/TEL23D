@@ -1,13 +1,14 @@
 package insertion
 
 func Sort(a []int) []int {
-	for i := 0; i < len(a)-1; i++ {
-		minIndex := i
-		for j := i + 1; j < len(a); j++ {
-			if a[j] < a[minIndex] {
-				a[j], a[minIndex] = a[minIndex], a[j]
-			}
+	for j := 1; j < len(a)-1; j++ {
+		elem := a[j]
+		i := j - 1
+		for i > -1 && a[i] > elem {
+			a[i+1] = a[i]
+			i = i - 1
 		}
+		a[i+1] = elem
 	}
 	return a
 }
