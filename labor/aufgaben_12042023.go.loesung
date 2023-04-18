@@ -12,10 +12,10 @@ var pr = fmt.Println
 * Summe der Zahlen zu merken
  */
 func adder() func(int) int {
-	//TODO
 	sum := 0
-	return func(i int) int {
-		sum += i
+	//TODO
+	return func(x int) int {
+		sum += x
 		return sum
 	}
 }
@@ -23,7 +23,6 @@ func demoAdder() {
 	pr("Aufgabe 1 - closures")
 	add1 := adder()
 	add2 := adder()
-	fmt.Printf("Datentyp von add1: %T\n", add1)
 	for i := 0; i < 5; i++ {
 		fmt.Println("add1:", add1(i))
 		fmt.Println("add2:", add2(i*2))
@@ -37,13 +36,15 @@ func demoAdder() {
  */
 func multiplyBy(x int) func(int) int {
 	//TODO
-	// return nil
-	return func(i int) int { return x * i }
+	return func(y int) int {
+		return x * y
+	}
 }
+
 func demoMultiplyBy() {
 	pr("Aufgabe 2 - higher order functions")
 	timesTwo := multiplyBy(2)
-	fmt.Println("2 * 21 =", timesTwo(21))
+	fmt.Println("2 * 3 =", timesTwo(21))
 }
 
 /* Aufgabe 3 - Bonusaufgabe
@@ -60,8 +61,9 @@ func func3(s, t string) string { return "func3 called with (" + s + "," + t + ")
 func Aufgabe3() {
 	pr("Aufgabe 3 - functions gone crazy")
 	fmt.Println(func1(func2, func3))
-	fmt.Println(func1(func2, func3))
-
+	fmt.Printf("Datentyp von func1: %T\n", func1)
+	fmt.Printf("Datentyp von func2: %T\n", func2)
+	fmt.Printf("Datentyp von func3: %T\n", func3)
 }
 
 /* Aufgabe 4 - go builtin sort package
@@ -90,10 +92,9 @@ func DemoGoSort() {
 		{"John", "Meier", 42},
 		{"John", "Müller", 42},
 	}
+	//TODO
+	//Hinweis: dir Lösung beinhaltet mehrere if Abfragen
 	sort.Slice(people, func(i, j int) bool {
-		//TODO
-		// die Funktion gibt true zurück, falls person[i] < person[j]
-		//Hinweis: dir Lösung beinhaltet mehrere if Abfragen
 		if people[i].LastName == people[j].LastName {
 			if people[i].FirstName == people[j].FirstName {
 				return people[i].Age < people[j].Age
@@ -105,10 +106,10 @@ func DemoGoSort() {
 	fmt.Println(people)
 }
 
-func main_old() {
+func main() {
 	demoAdder()
 	demoMultiplyBy()
-	// DemoGoSort()
-	//Aufgabe3()
+	DemoGoSort()
+	Aufgabe3()
 
 }
