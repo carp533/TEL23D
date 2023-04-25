@@ -129,8 +129,8 @@ func checkWin(b board) string {
 
 func PlayGame() {
 	b := NewBoard()
-	possibleMoves, _ := getPossibleMoves(*b)
-	fmt.Println(possibleMoves)
+	//possibleMoves, _ := getPossibleMoves(*b)
+	//fmt.Println(possibleMoves)
 
 	opponent := choose_opponent()
 	var xInp, yInp int
