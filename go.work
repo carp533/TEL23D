@@ -1,7 +1,9 @@
 go 1.19
 
 use (
+	./files
 	./functiondemo
+	./labor
 	./recursion
 	./recursion/hanoi
 	./recursion/sudoku
@@ -14,5 +16,7 @@ use (
 	./sorting/merge
 	./sorting/quick
 	./sorting/selection
+	./tictactoe
+	./tree
 	./wiki
 )
