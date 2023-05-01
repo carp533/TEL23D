@@ -11,5 +11,13 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# solutions
+*.loesung
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
+recursion/sudoku/copy_eins.go
+recursion/sudoku/copy_mitschriften.go
+filecopyklausur/go.mod
+filecopyklausur/main.go
+
