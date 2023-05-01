@@ -4,6 +4,7 @@ use (
 	./files
 	./functiondemo
 	./labor
+	./nimmspiel
 	./recursion
 	./recursion/hanoi
 	./recursion/sudoku
