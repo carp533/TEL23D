@@ -140,7 +140,7 @@ func levelOrder(root *Node) [][]rune {
 	return result
 }
 
-func main() {
+func main_() {
 
 	nums := []int{}
 	fmt.Println(average(nums...))
