@@ -3,18 +3,32 @@ package main
 /* Aufgabe: ermittle die K häufigsten Elemente einer Liste
  */
 
-import "container/heap"
+import (
+	"container/heap"
+)
 
 func topKFrequent(nums []int, k int) []int {
-	// TODO: erstelle die map count mit den Elementen aus nums und deren Häufigkeit
-	//count := make(map[int]int)
-
+	count := make(map[int]int)
+	// TODO: erstelle eine map mit den Elementen aus nums und deren Häufigkeit
+	for _, num := range nums {
+		if _, ok := count[num]; !ok {
+			count[num] = 1
+		} else {
+			count[num]++
+		}
+	}
 	nums_ := make(Nums, 0)
 	// TODO: wandle die map in die Liste nums_ um
-
+	for num, cnt := range count {
+		nums_ = append(nums_, Num{Val: num, Count: cnt})
+	}
 	heap.Init(&nums_)
 	var res []int
 	// TODO: rufe k mal Pop auf des Heaps und schreibe das Ergebnis in die Liste res
+	for i := 0; i < k; i++ {
+		num := heap.Pop(&nums_).(Num)
+		res = append(res, num.Val)
+	}
 	return res
 }
 
