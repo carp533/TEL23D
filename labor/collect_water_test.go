@@ -24,7 +24,6 @@ func maxr(x []int) []int {
 	}
 	return res
 }
-
 func min(x, y []int) []int {
 	res := make([]int, len(x))
 	for i := 0; i < len(x); i++ {
@@ -45,7 +44,6 @@ func diff(x, y []int) []int {
 	}
 	return res
 }
-
 func sum(x []int) int {
 	res := 0
 	for _, v := range x {
@@ -53,7 +51,6 @@ func sum(x []int) int {
 	}
 	return res
 }
-
 func calculate(ein []int) int {
 	ml := maxl(ein)
 	mr := maxr(ein)
