@@ -2,8 +2,10 @@ go 1.19
 
 use (
 	./checkmail
+	./checkmail_loesung
 	./files
 	./functiondemo
+	./http
 	./labor
 	./nimmspiel
 	./recursion
